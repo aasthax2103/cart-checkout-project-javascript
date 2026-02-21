@@ -13,7 +13,10 @@ It simulates a real-world online shopping workflow including:
 - Cart management  
 - Checkout flow  
 - Order placement  
-- Order history tracking  
+- Order history tracking
+
+🌐 **Live Deployment:**  
+https://aasthax2103.github.io/cart-checkout-project-javascript/components/amazon.html
 
 The application integrates with a mock backend API and uses **localStorage for persistent cart state**, following real-world frontend architecture practices.
 
