@@ -1,12 +1,12 @@
-# 🚀 Amazon-Style E-Commerce Frontend (Vanilla JS)
+# 🚀 Cart & Checkout System (Vanilla JavaScript)
 
 ---
 
 ## 📌 Project Overview
 
-This project is a **fully functional Amazon-style e-commerce frontend application** built using **HTML, CSS, and Vanilla JavaScript**.
+This project is a **fully functional e-commerce frontend application** built using **HTML, CSS, and Vanilla JavaScript**.
 
-It simulates a real-world shopping workflow including:
+It simulates a real-world online shopping workflow including:
 
 - Product browsing  
 - Smart search filtering  
@@ -15,7 +15,11 @@ It simulates a real-world shopping workflow including:
 - Order placement  
 - Order history tracking  
 
-The project integrates with a **mock backend API** and uses **localStorage for persistent cart state**, mimicking real production architecture patterns.
+The application integrates with a mock backend API and uses **localStorage for persistent cart state**, following real-world frontend architecture practices.
+
+> ⚠️ This is an educational frontend project built for learning purposes only.  
+> It is not affiliated with or endorsed by any commercial brand.  
+> No real payments or personal data are processed.
 
 ---
 
@@ -25,31 +29,30 @@ The project integrates with a **mock backend API** and uses **localStorage for p
 
 ### 🛍 Product Browsing
 - Dynamic product loading using **Fetch API**
-- Object-Oriented **Product Models**
-- Product rating, pricing, and variation support
+- Object-Oriented Product Models
+- Product rating and pricing support
 
 ---
 
 ### 🔎 Smart Search System
 - URL-based search query system  
-- Case-insensitive search  
-
-Supports:
-- Product name search  
-- Keyword-based search matching  
+- Case-insensitive filtering  
+- Supports:
+  - Product name search  
+  - Keyword-based search matching  
 
 Example:
 ```
-amazon.html?search=socks
+store.html?search=socks
 ```
 
 ---
 
 ### 🛒 Cart System
-- Add to Cart with quantity selection  
+- Add to cart with quantity selection  
 - Real-time cart size updates  
 - Persistent cart using **localStorage**  
-- Quantity editing inside checkout page  
+- Quantity editing in checkout page  
 - Delivery option selection per product  
 
 ---
@@ -57,25 +60,25 @@ amazon.html?search=socks
 ### 📦 Checkout System
 Dynamic order summary calculation:
 
-- Product cost  
+- Product subtotal  
 - Shipping cost  
 - Tax calculation  
 
-Other Features:
+Additional functionality:
 - Backend **Order POST request simulation**
-- Cart auto-clear after order placement  
+- Cart auto-clear after successful order placement  
 
 ---
 
 ### 📜 Orders History Page
-Fetches and renders past orders with:
+Displays previously placed orders with:
 
-- Order Date  
+- Order date  
 - Order ID  
-- Total Cost  
-- Product List  
-- Delivery Dates  
-- **Buy Again** functionality (restores quantity)
+- Total cost  
+- Purchased products  
+- Delivery dates  
+- **Buy Again** functionality (restores quantity to cart)
 
 ---
 
@@ -85,28 +88,30 @@ Fetches and renders past orders with:
 - ES Modules  
 - Async / Await  
 - Fetch API  
-- Event Delegation  
+- Event Handling  
 - DOM Manipulation  
 - URLSearchParams  
 
 ---
 
-### 🏗 Architecture
+## 🏗 Architecture
 
 **Separation of Concerns**
 
 ```
-Data Layer → UI Rendering → API Layer
+Data Layer → UI Rendering → Service Layer
 ```
 
 Includes:
+
 - Data Layer → `cart.js`, `products.js`, `orders.js`
-- UI Rendering Layer → DOM Rendering Modules
-- Service Layer → API Calls
+- UI Rendering Layer → DOM rendering modules
+- Service Layer → API communication
 
 ---
 
-### 💾 Storage & State Management
+## 💾 Storage & State Management
+
 - localStorage Cart Persistence  
 - URL Query State Synchronization  
 - Backend + Frontend State Coordination  
@@ -122,6 +127,8 @@ GET  https://supersimplebackend.dev/products
 POST https://supersimplebackend.dev/orders
 ```
 
+These endpoints simulate real backend behavior for learning purposes.
+
 ---
 
 ## 🛠 Tech Stack
@@ -129,7 +136,7 @@ POST https://supersimplebackend.dev/orders
 - HTML5  
 - CSS3  
 - JavaScript (ES6+)  
-- DayJS (Date Formatting)  
+- DayJS (Date formatting)  
 - LocalStorage  
 - REST APIs  
 
@@ -145,15 +152,15 @@ POST https://supersimplebackend.dev/orders
   deliveryOptions.js
 
 /scripts
-  amazon.js
+  store.js
   checkout.js
   orderSummary.js
   paymentSummary.js
-  buy.js
+  ordersPage.js
   header.js
 
 /pages
-  amazon.html
+  store.html
   checkout.html
   orders.html
 ```
@@ -163,22 +170,22 @@ POST https://supersimplebackend.dev/orders
 ## 💡 What Makes This Project Stand Out
 
 ✅ Built using **Pure Vanilla JavaScript (No Frameworks)**  
-✅ Production-like **State Management**  
-✅ Realistic **E-commerce Workflow Simulation**  
-✅ Modular & Scalable Architecture  
-✅ URL-driven UI State  
-✅ Advanced Search Logic (Name + Keyword Matching)  
+✅ Production-like state management  
+✅ Realistic e-commerce workflow simulation  
+✅ Modular and scalable architecture  
+✅ URL-driven UI state  
+✅ Advanced search logic (Name + Keyword Matching)  
 
 ---
 
 ## 📈 Future Improvements
 
-- User Authentication  
-- Real Payment Gateway Integration  
-- Inventory Management  
-- Admin Dashboard  
-- Order Tracking Timeline UI  
-- Backend Database Integration  
+- User authentication  
+- Payment gateway integration  
+- Inventory management  
+- Admin dashboard  
+- Order tracking timeline  
+- Backend database integration  
 
 ---
 
@@ -190,5 +197,6 @@ Frontend & Software Development Enthusiast
 
 ---
 
-## ⭐ If You Like This Project
-If this project helped you or you found it interesting, consider giving it a ⭐ on GitHub!
+## ⭐ Support
+
+If you found this project useful or interesting, consider giving it a ⭐ on GitHub!
